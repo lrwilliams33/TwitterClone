@@ -1,0 +1,106 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: rgb(66, 66, 66);
+}
+
+.username-div {
+  margin-top: 70px;
+}
+
+.username-text-bar {
+  display: inline-block;
+  align-items: center;
+  width: 205px;
+  height: 30px;
+  background-color: rgb(66, 66, 66);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2px;
+  outline: none;
+  color: rgb(188, 187, 187);
+}
+
+.submit-button {
+  margin-top: 10px;
+  height: 30px;
+  width: 55px;
+  color: white;
+  background-color: rgb(8, 160, 233);
+  border: none;
+  border-radius: 25px;
+}
+
+.submit-button:hover {
+  background-color: rgb(111, 186, 221);
+}
+
+.submit-button:active {
+  background-color: rgb(146, 193, 214);
+}
+
+.preview-div {
+  background-color: rgb(66, 66, 66);
+  margin-top: 25px;
+  height: 200px;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(33, 33, 33);
+}
+
+
+.text-box-title {
+  margin-bottom:5px;
+  color: rgb(8, 160, 233);
+
+}
+
+.text-bar {
+  display: flex;
+  flex: 1;
+  height: 100px;
+  width: 98%;
+  font-size: 10px;
+  background-color: rgb(66, 66, 66);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2px;
+  font-size: 16px;
+  color: rgb(188, 187, 187);
+  vertical-align: top;
+  text-align: left;
+  outline: none;
+}
+
+.post-button {
+  margin-top: 10px;
+  height: 30px;
+  width: 55px;
+  color: white;
+  background-color: rgb(8, 160, 233);
+  border: none;
+  margin-left: 94%;
+  border-radius: 25px;
+}
+
+.post-button:hover {
+  background-color: rgb(111, 186, 221);
+}
+
+.post-button:active {
+  background-color: rgb(146, 193, 214);
+}
+
+.post-div {
+  margin-top: 8px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(33, 33, 33);
+}
+
+.user {
+  padding-bottom: 5px;
+  color: rgb(8, 160, 233);
+}
+
+.post-text {
+  padding-left: 30px;
+  padding-bottom: 8px;
+}

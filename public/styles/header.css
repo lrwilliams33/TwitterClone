@@ -1,0 +1,44 @@
+.header {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: rgb(29, 29, 29);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.twitter-logo {
+  height: 44px;
+  border-radius: 25px;
+  margin-left: 10px;
+}
+
+.middle-section {
+  font-size: 50px;
+  font-family: sans-serif;
+  color: rgb(8, 160, 233);
+}
+
+.right-section {
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: rgb(8, 160, 233);
+  margin-right: 5px;
+}
