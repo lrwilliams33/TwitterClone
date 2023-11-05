@@ -3,30 +3,16 @@ const express = require('express');
 const app = express();
 const port = 3500;
 
-const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://williamslandon:LandonWilliams@tweets.0y3s327.mongodb.net/?retryWrites=true&w=majority'
-// connect to the DB
-mongoose.connect(mongoURI);
+// import create tweet functions
+const TweetFunctions = require('./controller/tweetController')
 
-// check connection to DB
-mongoose.connection.on('connected', () => {
-  console.log('Connected to MongoDB');
-});
+// import db file
+const connectDB = require('./config/dbConn');
+const { default: mongoose } = require('mongoose');
 
-// Handle any DB connection errors
-mongoose.connection.on('error', (err) => {
-  console.error('MongoDB connection error:', err);
-});
+//connect to DB using function in dbConn file
+connectDB();
 
-
-// tweet schema
-const tweetSchema = new mongoose.Schema({
-  username: String,
-  text: String
-});
-
-// create tweet model
-const Tweet = mongoose.model("Tweet", tweetSchema);
 
 // serve the files in public
 app.use(express.static('public'));
@@ -38,7 +24,17 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+app.post('/', TweetFunctions.createNewTweet);
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+// connect to db
+mongoose.connection.once('connected', () => {
+  console.log('Connected to MongoDB');
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+});
+
+// Handle any DB connection errors
+mongoose.connection.on('error', (err) => {
+  console.error('MongoDB connection error:', err);
 });
